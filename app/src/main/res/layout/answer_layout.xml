@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:visibility="gone"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/replyEditText"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/eight_dp"
+
+        android:layout_marginEnd="@dimen/sixteen_dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:hint="@string/reply_hint"
+
+        android:autofillHints="reply"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/sendButton"
+
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:padding="@dimen/sixteen_dp"
+
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginEnd="@dimen/eight_dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/replyEditText"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_weight="1"
+
+        android:background="@drawable/send"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

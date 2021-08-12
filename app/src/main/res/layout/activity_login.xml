@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.sourabhverma.mirrorscoretask01.login.LoginViewModel" />
+
+        <import type="android.content.Context" />
+        <import type="com.sourabhverma.mirrorscoretask01.login.LoginActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login.LoginActivity">
+
+        <TextView
+            android:id="@+id/textView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/login"
+            android:textSize="@dimen/twenty_eight_sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.25"
+            />
+
+        <EditText
+            android:id="@+id/username"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+
+            android:hint="@string/enter_username"
+            android:autofillHints="username"
+
+            android:textAlignment="textStart"
+
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/sixteen_dp"
+            android:layout_marginEnd="@dimen/sixteen_dp"
+
+            android:paddingStart="@dimen/sixteen_dp"
+            android:paddingEnd="@dimen/sixteen_dp"
+
+            android:inputType="textPersonName"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+
+            android:hint="@string/enter_password"
+            android:autofillHints="username"
+
+            android:textAlignment="textStart"
+
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/sixteen_dp"
+            android:layout_marginEnd="@dimen/sixteen_dp"
+
+            android:paddingStart="@dimen/sixteen_dp"
+            android:paddingEnd="@dimen/sixteen_dp"
+
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/LoginButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/login"
+
+            android:onClick="@{()->loginViewModel.onLoginButtonClick(username.getText().toString(), password.getText().toString(), context)}"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+
+            android:layout_marginTop="@dimen/thirty_dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

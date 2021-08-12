@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reportArray">
+        <item>Select any one option to report:-</item>
+        <item>Missing Option</item>
+        <item>Missing Image</item>
+        <item>Spelling Mistake</item>
+        <item>Incorrect Answer</item>
+        <item>Incorrect Question</item>
+    </string-array>
+</resources>

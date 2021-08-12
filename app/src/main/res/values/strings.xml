@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mirror Score Task 01</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="up_votes">Upvotes</string>
+    <string name="answer">Answer</string>
+    <string name="report">Report</string>
+    <string name="image_description">Image Description</string>
+    <string name="reply_hint">Enter reply here…</string>
+    <string name="text_for_post">Enter text for post here…</string>
+    <string name="desc_for_post">Enter subject Id…</string>
+    <string name="submit">Submit</string>
+    <string name="add_image">Add Image</string>
+</resources>
